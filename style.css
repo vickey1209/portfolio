@@ -315,6 +315,56 @@ body {
     transform: translateY(-10px);
 }
 
+section{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.container1
+{
+    width:600px ;
+    height: 500px;
+    padding: 75px 90px;
+    margin-top: 120px;
+}
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness:5px; 
+    margin-bottom: 50px;
+
+}
+.bar{
+    font-size: 23px;
+
+}
+
+.Technical-bars .bar{
+    margin-top: 40px 0;
+}
+
+.Technical-bars .bar:first-child
+{
+    margin-top: 0;
+
+}
+.Technical-bars .bar:last-child
+{
+    margin-bottom: 0;
+
+}
+.Technical-bars .bar .info span
+{
+    margin-bottom: 5px;
+
+}
+.Technical-bars .bar .info span{
+    font-size:17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
 
 /* section{
     display: flex;

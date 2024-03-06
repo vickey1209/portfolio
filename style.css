@@ -63,10 +63,10 @@ body {
 .home {
     position: relative;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 100vh;
     background: #081b29;
-    /* background: url("./images/lala.jpeg") no-repeat; */
+    background: url("./images/lala.jpeg") no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -90,10 +90,7 @@ body {
 
 .home-content {
     max-width: 600px;
-   
 }
-
-
 
 .home-content h3 {
     font-size: 32px;
@@ -179,22 +176,6 @@ body {
     box-shadow: 0 0 5px cyan, 0 0 25px cyan
 }
 
-.btn-box1 {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #0ef;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #081b29;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 2s;
-    box-shadow: 0 0 15px cyan, 0 0 15px cyan
-}
-
 .btn-box:hover {
     box-shadow: 0 0 5px cyan,
         0 0 25px cyan, 0 0 200px cyan,
@@ -204,15 +185,12 @@ body {
 .about {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
     align-items: center;
+
     gap: 1.5rem;
-    padding: 100px;
 
-}
 
-.about-img{
-    display: grid;
-    place-items: center;
 }
 
 .about-img img {
@@ -249,74 +227,7 @@ body {
 
 }
 
-
-.containers{
-    position: relative;
-    
-    display: flex;
-    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,transparent,#0004) ;
- 
-    
-}
-.containers .box{
-/* margin-left: 50px; */
-position: relative;
-width:420px;
-height: 380px;
-background: #444;
-margin: 0 20px;
-border-radius: 20px;
-background: linear-gradient(45deg, #0ef 25%,#444 25%, #444 50%,#0ef 50%,#0ef 75%,
-#444 75%, #444 100%  );
-background-size: 40px 40px;
-filter: grayscale(1);
-animation: animateBg 0.5s linear infinite;
-animation-play-state: paused ;
-transition: filter 1s ;
-display: flex;
-justify-content: center;
-}
-
-
-.containers .box:nth-child(2)
-{
-    background: linear-gradient(135deg, #e775c4 25%,#444 25%, #444 50%,#e775c4 50%, #e775c4 75%,
-    #444 75%, #444 100%  ); 
-    background-size: 40px 40px;
-}
-
-.containers .box:hover
-{
-    animation-play-state: running;
-    filter: grayscale(0);
-
-}
-@keyframes animateBg
-{
-    0%{
-        background-position: 0;
-    }
-    100%
-    {
-        background-position: 40px;
-    }
-}
-.containers .box img{
-    position: absolute;
-    bottom: 0;
-    height: 90%;
-    transition: height 0.5s;
-}
-
-
-.containers .box:hover img{
-    height: 500px;
-}
-
-.service-section{
-    justify-content: center;
-}
-.services {
+#services {
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
@@ -326,8 +237,7 @@ justify-content: center;
 .sub-title {
     text-align: center;
     font-size: 60px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    padding-bottom: 70px;
 }
 
 .sub-title span {
@@ -345,8 +255,7 @@ justify-content: center;
     margin-top: 50px;
 }
 
-.services-list .service-card {
-    cursor: pointer;
+.services-list div {
     background-color: transparent;
     padding: 40px;
     font-size: 13px;
@@ -409,27 +318,18 @@ justify-content: center;
 section {
     display: flex;
     flex-wrap: wrap;
-}
 
-.skill-section{
-    padding: 100px;
-    flex-direction: column;
-}
-
-.skill-section-inner{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 }
 
 .container1 {
+    width: 600px;
+    height: 500px;
     padding: 75px 90px;
+    margin-top: 120px;
 }
 
 .heading1 {
-    /* margin-top: 20px; */
     text-align: center;
-    font-size: 2.5rem;
-    margin: 0;
     text-decoration: underline;
     text-underline-offset: 10px;
     text-decoration-thickness: 5px;
@@ -474,15 +374,14 @@ section {
     width: 100%;
     height: 5px;
     background-color: #000000;
-    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-    transform: scaleX(0);
- 
+    animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    transform: scaleX(1);
+    opacity: 1;
     transform-origin: left;
 
 }
 
 @keyframes animate {
-    
     100% {
         transform: scaleX(1);
     }
@@ -494,7 +393,7 @@ section {
     background-color: #0ef;
     position: absolute;
     border-radius: 10px;
-    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
     transform: scaleX(1);
     transform-origin: left;
 }
@@ -592,33 +491,29 @@ width: 20%;
 .radial-bars {
     width: 100%;
     display: flex;
-    /* height: 170px;
-    margin-bottom: 10px;
-    position: relative; */
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
 }
 
-.radial-bars .radial-bar {
+.radial-bars .radial-bars {
     width: 50%;
     height: 170px;
     margin-bottom: 10px;
     position: relative;
- 
 }
 
-.radial-bars .radial-bar svg {
+.radial-bars .radial-bars svg {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
+    transform: translate(-50%, -50%) rotate(-30deg);
     width: 120px;
     height: 160px;
 
 }
 
-.radial-bars .radial-bar .progress-bar {
+.radial-bars .radial-bars .progress-bar {
     stroke-width: 10;
     stop-color: black;
     fill: transparent;
@@ -630,7 +525,7 @@ width: 20%;
 
 @keyframes animate-bar {
     100% {
-        stroke-dashoffset: 1;
+        stroke-dashoffset: -1;
     }
 }
 
@@ -661,14 +556,14 @@ width: 20%;
 
 @keyframes animate-path1 {
     100% {
-        stroke-dashoffset: 125;;
+        stroke-dashoffset: 50;
 
     }
 }
 
 @keyframes animate-path2 {
     100% {
-        stroke-dashoffset: 125;
+        stroke-dashoffset: 175;
     }
 }
 
@@ -684,11 +579,11 @@ width: 20%;
     }
 }
 
-.radial-bars .percentage {
+.radial-bar .percentage {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50% );
+    transform: translate(-50% , -50%);
     font-size: 17px;
     font-weight: 500;
     animation: showText 0.5s 1s linear forwards;
@@ -746,63 +641,3 @@ width: 20%;
     }
 
 }
-
-.portfolio-section{
-    padding: 100px;
-}
-.portfolio{
-    background: var(--second-bg-color);
-}
-
-.portfolio-container
-{
-    display: grid;
-    grid-template-columns: repeat(3, 400px);
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
-}
-
-.portfolio-container .portfolio-box{
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.portfolio-container .portfolio-box:hover .portfolio-img img{
-    transform: scale(1.2);
-    transition: all 0.5s;
-}
-
-.portfolio-box .portfolio-img{
-    width: 100%;
-}
-
-.portfolio-box .portfolio-img img{
-    width: 100%;
-}
-
-.portfolio-box .portfolio-details{
-    padding: 20px;
-    text-align: center;
-}
-
-.portfolio-box .portfolio-details h2{
-    margin-bottom: 10px;
-}
-
-.portfolio-box .portfolio-details p{
-    color: #ffffff9e;
-    margin: 20px 0;
-    line-height: 1.3em;
-}
-
-.portfolio-box .portfolio-details button{
-    border: none;
-    background: #0ef;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #383838;
-}
-
